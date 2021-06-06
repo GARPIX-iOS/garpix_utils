@@ -1,0 +1,9 @@
+author: Danil Lomaev
+output: Docs
+swift_build_tool: spm
+build_tool_arguments:
+  - -scheme
+  - GXUtilz
+  - -sdk
+  - iphoneos
+  - -destination,platform=iOS Simulator,OS=latest,name=iPhone 11 Pro

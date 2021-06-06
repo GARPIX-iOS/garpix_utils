@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/danillomaev/Desktop/projects/GXUtilz/Sources/GXUtilz/Common/URLBuilder.swift",
+      "line": 10,
+      "symbol": "URLBuilder",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/danillomaev/Desktop/projects/GXUtilz/Sources/GXUtilz/Common/URLBuilder.swift",
+      "line": 11,
+      "symbol": "URLBuilder.buildQuery(path:queryParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/danillomaev/Desktop/projects/GXUtilz"
+}
