@@ -1,5 +1,5 @@
 author: Danil Lomaev
-output: Docs
+output: public
 swift_build_tool: xcodebuild
 build_tool_arguments:
   - -scheme

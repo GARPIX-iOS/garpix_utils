@@ -3,7 +3,7 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-  - echo 'Nothing to do...'
+  - echo 'create public...'
   artifacts:
     paths:
     - docs
