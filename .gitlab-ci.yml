@@ -6,7 +6,7 @@ pages:
   - echo 'create public...'
   artifacts:
     paths:
-    - docs
+    - public
   only:
   - master
 
