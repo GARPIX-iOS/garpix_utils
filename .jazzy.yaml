@@ -1,6 +1,6 @@
 author: Danil Lomaev
 output: Docs
-swift_build_tool: spm
+swift_build_tool: xcodebuild
 build_tool_arguments:
   - -scheme
   - GXUtilz
