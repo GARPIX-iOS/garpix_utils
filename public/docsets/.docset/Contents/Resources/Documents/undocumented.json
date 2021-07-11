@@ -1,20 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/danillomaev/Desktop/projects/GXUtilz/Sources/GXUtilz/Codable/NullCodable.swift",
-      "line": 13,
-      "symbol": "NullCodable.wrappedValue",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/danillomaev/Desktop/projects/GXUtilz/Sources/GXUtilz/Codable/NullCodable.swift",
-      "line": 15,
-      "symbol": "NullCodable.init(wrappedValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/danillomaev/Desktop/projects/GXUtilz/Sources/GXUtilz/Common/Array.swift",
       "line": 11,
       "symbol": "Array.chunked(into:)",
