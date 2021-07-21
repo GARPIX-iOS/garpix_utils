@@ -1,12 +1,17 @@
-image: alpine:latest
+image: ruby:latest
+stages:
+  - deploy
+
+before_script:
+  - ruby -v  
 
 pages:
   stage: deploy
   script:
-  - echo 'create public...'
+    - jazzy --min-acl private
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
-
+    - tags
+    - master
