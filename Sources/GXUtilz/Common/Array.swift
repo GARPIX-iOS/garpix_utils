@@ -24,6 +24,8 @@ public extension Array {
 }
 
 public extension Array {
+    /// Разбивает массив на 2 части
+    /// - Returns: left: - левые элементы, собранные в массив, right: - правые элементы, собранные в массив
     func split() -> (left: [Element], right: [Element]) {
         let ct = count
         let half = ct / 2
