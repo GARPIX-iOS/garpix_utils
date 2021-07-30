@@ -10,4 +10,6 @@ jobs:
     - name: Publish Jazzy Docs
       uses: sersoft-gmbh/swifty-docs-action@v1
       with:
-        xcodebuild-destination: 'platform=iOS Simulator,OS=14.0,name=iPhone 11'
+        xcodebuild-scheme: GXUtilz
+        xcodebuild-sdk: iphoneos
+        xcodebuild-destination: 'platform=iOS Simulator,OS=latest,name=iPhone 11 Pro'
