@@ -1,7 +1,5 @@
 name: PublishDocumentation
-on: 
-  release:
-    types: [published]
+on: [push]
 jobs:
   deploy_docs:
     runs-on: macOS-latest
@@ -10,6 +8,4 @@ jobs:
     - name: Publish Jazzy Docs
       uses: sersoft-gmbh/swifty-docs-action@v1
       with:
-        xcodebuild-scheme: GXUtilz
-        xcodebuild-sdk: iphoneos
         xcodebuild-destination: 'platform=iOS Simulator,OS=latest,name=iPhone 11 Pro'
