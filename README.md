@@ -16,6 +16,11 @@
 Выбираем последнюю версию по тегу, ждем синхронизации, вуаля, можно использовать утилитки) 
 При обновлении утилит, можно воспользоваться `File -> Swift Packages -> Update to Latest packages versions`
 
+# Documentation
+
+Документация на русском языке:
+https://garpix-ios.github.io/garpix_utils/index.html
+
 
 # Changelog
 
