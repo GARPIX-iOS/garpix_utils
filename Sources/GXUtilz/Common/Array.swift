@@ -8,22 +8,6 @@
 import Foundation
 
 public extension Array {
-    func chunked(into size: Int) -> [[Element]] {
-        var chunkedArray = [[Element]]()
-
-        for index in 0 ... count {
-            if index % size == 0, index > 0 {
-                chunkedArray.append(Array(self[(index - size) ..< index]))
-            } else if index == count {
-                chunkedArray.append(Array(self[index - 1 ..< index]))
-            }
-        }
-
-        return chunkedArray
-    }
-}
-
-public extension Array {
     /// Разбивает массив на 2 части
     /// - Returns: left: - левые элементы, собранные в массив, right: - правые элементы, собранные в массив
     func split() -> (left: [Element], right: [Element]) {
