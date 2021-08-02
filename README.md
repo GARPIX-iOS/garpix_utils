@@ -2,7 +2,7 @@
 
 ## Модуль с утилитами для iOS проектов.
 
-## 🔷 Требования
+# 🔷 Требования
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Xcode 11.0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Swift 5+  
@@ -16,21 +16,21 @@
 Выбираем последнюю версию по тегу, ждем синхронизации, вуаля, можно использовать утилитки) 
 При обновлении утилит, можно воспользоваться `File -> Swift Packages -> Update to Latest packages versions`
 
-# Documentation
+# 🔷 Documentation
 
 Документация на русском языке:
 https://garpix-ios.github.io/garpix_utils/index.html
 
 
-# Changelog
+# 🔷 Changelog
 
 See [CHANGELOG.md](CHANGELOG.md).
 
-# Contributing
+# 🔷 Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-https://garpix.com
+🔷🔷🔷 https://garpix.com 🔷🔷🔷
 
 
 
