@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
+/// Структура, которая описывает скругленные углы
 struct RoundedCorner: Shape {
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
@@ -19,7 +20,12 @@ struct RoundedCorner: Shape {
     }
 }
 
-extension View {
+public extension View {
+    /// Функция для задания cornerRadius различным углам
+    /// - Parameters:
+    ///   - radius: Радиус скругления
+    ///   - corners: Массив углов (например, [.topLeft, .bottomLeft])
+    /// - Returns: View со скругленными углами
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
     }
