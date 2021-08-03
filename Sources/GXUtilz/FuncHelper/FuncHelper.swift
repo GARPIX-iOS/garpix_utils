@@ -37,7 +37,7 @@ public struct FuncHelper {
     ///   - components: Компонент даты: день, месяц, год
     ///   - dateFormat: Стринговый формат даты, например "yyyy.MM.dd"
     /// - Returns: Количество дней/месяцев/лет
-    public static func period(from startDate: String, to endDate: String, with components: Set<Calendar.Component> = [.day], and dateFormat: String) -> Int {
+    public static func period(from startDate: String, to endDate: String, components: Set<Calendar.Component> = [.day], dateFormat: String) -> Int {
         let formatter = DateFormatter()
         formatter.locale = .current
         formatter.dateFormat = dateFormat
