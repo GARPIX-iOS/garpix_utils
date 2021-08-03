@@ -9,18 +9,18 @@ import Foundation
 
 // MARK: - Date extension with Helper Functions
 public extension Date {
-    /// That function transform Date to String
-    /// - Parameter dateFormat: select case from provided values by enum
-    /// - Returns: Returns String from Date
+    /// Эта функция преобразует Date в String
+    /// - Parameter dateFormat: выбрать case из предоставленных значений перечислением
+    /// - Returns: возвращает String из Date
     func dateToString(dateFormat: DateFormats) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat.rawValue
         return formatter.string(from: self)
     }
     
-    /// That function transform Date to String
-    /// - Parameter formatedBy: add your format string but if sth will goes wrong it will be your fault)
-    /// - Returns: Returns string from Date
+    /// Эта функция преобразует Date в String но безопаснее использовать dateToString(dateFormat: DateFormats) -> String
+    /// - Parameter formatedBy: добавьте строку формата, но если что-то пойдет не так, это будет ваша вина)
+    /// - Returns: возвращает String из Date
     func dateToString(formatedBy: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = formatedBy

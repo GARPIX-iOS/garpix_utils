@@ -8,29 +8,26 @@
 import UIKit
 
 public extension String {
-    /// This method will help to you to transform text as vehicle Gov Number
+    /// Этот метод поможет вам форматировать строку содержащую текст и числа
     /// - Parameters:
-    ///   - mask: mask pls check symbols properly
-    ///   - letterSymbol: letters of number
-    ///   - numberSymbol: numbers of number
-    ///   - formatLanguage: language of number
-    /// - Returns: formatted string
-    func formatGovNumber(with mask: String = "X 111 XX 111",
-                         letterSymbol: String.Element = "X",
-                         numberSymbol: String.Element = "1",
-                         formatLanguage: FormatWithLanguage = .rus) -> String {
+    ///   - mask: пожалуйста, внимательно заполните маску и символы иначе функция может работать некорректно
+    ///   - letterSymbol: буквенный символ
+    ///   - numberSymbol: численный символ
+    ///   - formatLanguage: с помощью этого перечисления мы передаем в функцию строку с символами которые нужно заменять
+    ///   - addSpecialSymbols: укажите false если вы хотите удалять специальные символы из строки после форматирования
+    /// - Returns: форматированную строку
+    func formatTextAndNumbers(with mask: String = "X 111 XX 111",
+                              letterSymbol: String.Element = "X",
+                              numberSymbol: String.Element = "1",
+                              formatLanguage: FormatWithLanguage?,
+                              addSpecialSymbols: Bool = true) -> String {
         var result = ""
         let value = replacingOccurrences(of: " ", with: "")
         var index = value.startIndex
         let numbersReplacing = "[^0-9]"
-        var textReplacing = "[^А-Яа-я]"
-        
-        switch formatLanguage {
-        case .rus:
-            textReplacing = "[^А-Яа-я]"
-        case .eng:
-            textReplacing = "[^A-Za-z]"
-        }
+        let specialSymbols = " !\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~].{8,}$"
+        let text = formatLanguage?.textReplacing ?? "[^A-Za-zА-яа-я]"
+        let textReplacing = addSpecialSymbols ? text + specialSymbols : text
         
         for ch in mask where index < value.endIndex {
             if ch == letterSymbol {
@@ -72,16 +69,25 @@ public extension String {
         return result
     }
     
+    /// Этот метод поможет вам форматировать строку содержащую текст или числа
     /// - Parameters:
-    ///   - mask: mask pls check symbols properly
-    ///   - symbol: symbols in mask and symbols here must be equal
-    ///   - onlyNumbers: shows can user add text from .numpad or from chosen keyboard
-    /// - Returns: formatted string
-    func formatText(with mask: String, symbol: String.Element, onlyNumbers: Bool) -> String {
+    ///   - mask: пожалуйста, внимательно заполните маску и символы иначе функция может работать некорректно
+    ///   - symbol: буквенный либо числовой символ
+    ///   - onlyNumbers: показывает, может ли пользователь добавлять текст из .numpad или с выбранной клавиатуры
+    ///   - formatLanguage: с помощью этого перечисления мы передаем в функцию строку с символами которые нужно заменять
+    ///   - addSpecialSymbols: укажите false если вы хотите удалять специальные символы из строки после форматирования
+    /// - Returns: форматированную строку
+    func formatText(with mask: String,
+                    symbol: String.Element,
+                    onlyNumbers: Bool,
+                    formatLanguage: FormatWithLanguage?,
+                    addSpecialSymbols: Bool = true) -> String {
         var result = ""
         var value = self
         let numbersReplacing = "[^0-9]"
-        let textReplacing = "[^A-Za-zА-яа-я0-9]"
+        let specialSymbols = " !\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~].{8,}$"
+        let text = formatLanguage?.textReplacing ?? "[^A-Za-zА-яа-я0-9]"
+        let textReplacing = addSpecialSymbols ? text + specialSymbols : text
 
         // value iterator
         var index = value.startIndex
@@ -137,10 +143,9 @@ public extension String {
 // MARK: - StringToDate extensions
 
 public extension String {
-    
-    /// That function transform String to Date
-    /// - Parameter dateFormat: select case from provided values by enum
-    /// - Returns: Returns Date from String
+    /// Эта функция преобразует String в Date
+    /// - Parameter dateFormat: выбрать case из предоставленных значений перечислением
+    /// - Returns: возвращает Date из String
     func stringToDate(dateFormat: DateFormats = .yearMonthDayWithDots) -> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat.rawValue

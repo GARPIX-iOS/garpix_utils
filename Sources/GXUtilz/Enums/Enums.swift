@@ -9,12 +9,22 @@ import Foundation
 
 // MARK: - Enum
 
+/// Это перечисление необходимо в функцях форматирующих текст для определения того на что заменять текст
 public enum FormatWithLanguage {
     case rus
     case eng
+    
+    var textReplacing: String {
+        switch self {
+        case .rus:
+            return "[^А-Яа-я]"
+        case .eng:
+            return "[^A-Za-z]"
+        }
+    }
 }
 
-/// This enum helps you to FormatDates with our provided methods like stringToDate or dateToString
+/// Это перечисление необходимо для упрощения форматирования в предоставленных нами методах  stringToDate или dateToString
 public enum DateFormats: String {
     case yearMonthDayWithDots = "yyyy.MM.dd"
     case yearMonthDayWithLine = "yyyy-MM-dd"

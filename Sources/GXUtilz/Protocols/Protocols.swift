@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Protocol
 
-/// That protocol provides isNil functionality to Binding values
+/// Этот протокол обеспечивает функциональность isNil в Binding значениях
 public protocol AnyOptional {
     var isNil: Bool { get }
 }
