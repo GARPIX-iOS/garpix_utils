@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 #if canImport(UIKit)
 import UIKit
-    extension View {
-        func hideKeyboard() {
+public extension View {
+    /// Удобная обертка, которую можно использовать во всех SwiftUI View для скрытия клавиатуры программно
+    public func hideKeyboard() {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
     }
