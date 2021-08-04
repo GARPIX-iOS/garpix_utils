@@ -28,7 +28,7 @@ public extension String {
         let specialSymbols = " !\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~].{8,}$"
         let text = formatLanguage?.textReplacing ?? "[^A-Za-zА-яа-я]"
         let textReplacing = addSpecialSymbols ? text + specialSymbols : text
-        
+
         for ch in mask where index < value.endIndex {
             if ch == letterSymbol {
                 result.append(String(value[index]).replacingOccurrences(of: textReplacing, with: "", options: .regularExpression))
@@ -42,7 +42,7 @@ public extension String {
         }
         return result
     }
-    
+        
     /// Функция для преобразования номера телефона в выбранный формат строки
     /// - Parameter mask: выбранный формат строки, по-умолчанию: "+Y (XXX) XXX-XX-XX"
     /// - Returns: номер телефона в нужном формате
@@ -112,8 +112,8 @@ public extension String {
             }
         }
         return result
-    }
 }
+
 
 // MARK: - StringToDate extensions
 
