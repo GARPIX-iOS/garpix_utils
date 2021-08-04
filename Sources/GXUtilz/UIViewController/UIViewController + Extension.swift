@@ -9,11 +9,15 @@ import UIKit
 import SwiftUI
 
 public extension UIViewController {
+    func testFunc() {
+        print("func works")
+    }
+    
     /// Фуекция добавляет  `View` из SwiftUI в качестве дочерней для `UIView`.
     /// - Parameters:
     ///   - swiftUIView: `View` из SwiftUI, которая добавляется в качестве дочерней вью .
     ///   - view: `UIView` родительская, в которую будет добавлена swiftUIView .
-    public func addSubSwiftUIView<Content>(_ swiftUIView: Content, to view: UIView) where Content: View {
+    func addSubSwiftUIView<Content>(_ swiftUIView: Content, to view: UIView) where Content: View {
         let hostingController = UIHostingController(rootView: swiftUIView)
 
         /// Добавить в качестве дочернего элемента текущего ViewController.
