@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-extension UIViewController {
+public extension UIViewController {
     /// Фуекция добавляет  `View` из SwiftUI в качестве дочерней для `UIView`.
     /// - Parameters:
     ///   - swiftUIView: `View` из SwiftUI, которая добавляется в качестве дочерней вью .
