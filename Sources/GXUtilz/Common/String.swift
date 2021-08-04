@@ -8,7 +8,7 @@
 import UIKit
 
 public extension String {
-    /// Этот метод поможет вам форматировать строку с различными содержимым
+    /// Этот метод поможет вам форматировать строку с различными содержимым при помощи маски
     /// - Parameters:
     ///   - mask: пожалуйста, внимательно заполните маску и символы иначе функция может работать некорректно
     ///   - symbol: буквенный либо числовой символ
@@ -40,52 +40,7 @@ public extension String {
         }
         return result
     }
-    
-    /// Этот метод поможет вам форматировать строку с различными содержимым
-    /// - Parameters:
-    ///   - mask: пожалуйста, внимательно заполните маску и символы иначе функция может работать некорректно
-    ///   - firstSymbol: первый символ
-    ///   - secondSymbol: второй символ
-    ///   - firstSymbolType: структура в которой пользователь задает ограничения для текста а также его язык
-    ///   - secondSymbolType: структура в которой пользователь задает ограничения для текста а также его язык
-    /// - Returns: форматированную строку
-    func formatTextWithTwoTypesSymbols(mask: String = "(X-111-XX-111)",
-                                       firstSymbol: String.Element = "X",
-                                       secondSymbol: String.Element = "1",
-                                       firstSymbolType: StringInputTypeProtocol?,
-                                       secondSymbolType: StringInputTypeProtocol?,
-                                       replaceFirstSymbolWith: String?,
-                                       replaceSecondSymbolWith: String?) -> String {
-        var result = ""
-        let value = replacingOccurrences(of: " ", with: "")
-        let firstSymbolReplacing = firstSymbolType?.calculateTextReplacing() ?? ""
-        let secondSymbolReplacing = secondSymbolType?.calculateTextReplacing() ?? ""
         
-        var index = value.startIndex
-        /// проводим итерацию до тех пор пока все символы маски не будут заполнены
-        for ch in mask where index < value.endIndex {
-            if ch == firstSymbol {
-                /// здесь вместо "firstSymbol" подставляется символ под текущим индексом
-                let value = String(value[index]).replacingOccurrences(of: firstSymbolReplacing, with: "", options: .regularExpression)
-                /// здесь если "replaceFirstSymbolWith" задан то  "firstSymbol" заменяется на "replaceFirstSymbolWith"
-                result.append(replaceFirstSymbolWith ?? value)
-                /// переходим к следующему символу
-                index = value.index(after: index)
-            } else if ch == secondSymbol {
-                /// здесь вместо "secondSymbol" подставляется символ под текущим индексом
-                let value = String(value[index]).replacingOccurrences(of: secondSymbolReplacing, with: "", options: .regularExpression)
-                /// здесь если "replaceSecondSymbolWith" задан то  "secondSymbol" заменяется на "replaceSecondSymbolWith"
-                result.append(replaceSecondSymbolWith ?? value)
-                /// переходим к следующему символу
-                index = value.index(after: index)
-            } else {
-                /// добавляется символ маски ( например "-" или "(" )
-                result.append(ch)
-            }
-        }
-        return result
-    }
-    
     /// Функция для преобразования номера телефона в выбранный формат строки
     /// - Parameter mask: выбранный формат строки, по-умолчанию: "+Y (XXX) XXX-XX-XX"
     /// - Returns: номер телефона в нужном формате
