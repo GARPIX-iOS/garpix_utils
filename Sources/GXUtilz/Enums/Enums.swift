@@ -14,7 +14,7 @@ public enum FormatWithLanguage {
     case rus
     case eng
     
-    var textReplacing: String {
+    public var textReplacing: String {
         switch self {
         case .rus:
             return "[^А-Яа-я]"
