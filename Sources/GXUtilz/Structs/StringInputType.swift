@@ -7,6 +7,14 @@
 
 import Foundation
 
+struct Test {
+    @State var text: String?
+    init() {
+        let date: Date
+        let text: String = date.dateToString(formatedBy: "yyyy.MM.dd")
+    }
+}
+
 /// Этот протокол позволяет задать пользователю ограничения на содержимое строки, а также через метод calculateTextReplacing получить строку содержимое которой не будет удаляться из текстфилда при форматировании
 public protocol StringInputTypeProtocol {
     var formatLanguage: FormatWithLanguage? { get set }
@@ -19,6 +27,15 @@ public protocol StringInputTypeProtocol {
 extension StringInputTypeProtocol {
     
     /// Данная функция возвращает строку передав которую в replacingOccurrences в методах formatText и formatTextAndNumbers можно отформатировать текст
+    /// ```
+    /// let inputType = StringInputType(
+    ///     containsText: false,
+    ///     containsNumbers: true,
+    ///     containsSpecialSymbols: false
+    /// )
+    ///
+    /// let textReplacing: String = inputType?.calculateTextReplacing() ?? "" // output -> "[^0-9]"
+    /// ```
     /// - Returns: Строку необходимую для замены текст неподходящего под форматирование на ""
     func calculateTextReplacing() -> String {
         var text = ""
