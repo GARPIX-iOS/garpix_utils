@@ -18,8 +18,11 @@ import Foundation
 /// ```
 @propertyWrapper
 public struct NullCodable<T> {
+    /// Значение, которое может оказаться null(nil)
     public var wrappedValue: T?
-
+    
+    ///  Init
+    /// - Parameter wrappedValue: Значение, которое может оказаться null(nil)
     public init(wrappedValue: T?) {
         self.wrappedValue = wrappedValue
     }
