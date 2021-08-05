@@ -7,11 +7,13 @@
 
 import Foundation
 
+/// Структура с функциями-помощниками
 public struct FuncHelper {
     /// Функция для получения существительного в нужном склонении при использовании с числительными
     /// например: 1 яблоко, 3 яблока, 5 яблок
     /// ```
-    /// let apple = FuncHelper.getWordFrom(declensions: ["яблоко", "яблока", "яблок"], int: 3) // output -> "яблока"
+    /// let apple = FuncHelper.getWordFrom(declensions: ["яблоко", "яблока", "яблок"], int: 3)
+    /// // output -> "яблока"
     /// ```
     /// - Parameters:
     ///   - declensions: здесь нужно указать слово в 3 склонениях (например: ["стул", "стула", "стульев"])
@@ -34,10 +36,11 @@ public struct FuncHelper {
     }
     
     /// Функция возвращает период времени между двумя датами (количество дней, месяце или лет)
+    /// ```
+    /// let daysAmount = FuncHelper.period(from: "21.07.2021", to: "28.07.2021", components: [.day], dateFormat: "dd.MM.yyyy")
+    /// // output -> 7
+    /// ```
     /// - Parameters:
-    /// ```
-    /// let daysAmount = FuncHelper.period(from: "21.07.2021", to: "28.07.2021", components: [.day], dateFormat: "dd.MM.yyyy") // output -> 7
-    /// ```
     ///   - startDate: Дата начала периода, считается от начала дня в текущей локации
     ///   - endDate: Дата окончания периода, считается от начала дня в текущей локации
     ///   - components: Компонент даты: день, месяц, год
