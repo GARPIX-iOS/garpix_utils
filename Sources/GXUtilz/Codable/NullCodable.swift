@@ -13,6 +13,8 @@ import Foundation
 ///     var name: String = ""
 ///     @NullCodable var favMusicAlbum: String?
 /// }
+/// // При декодировании структуры или в использовании Alamofire
+/// // Получается такой json
 /// // Output json:
 /// // { "name": "",  favMusicAlbum: null }
 /// ```
