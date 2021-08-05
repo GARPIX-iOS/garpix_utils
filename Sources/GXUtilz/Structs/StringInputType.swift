@@ -7,14 +7,6 @@
 
 import Foundation
 
-struct Test {
-    @State var text: String?
-    init() {
-        let date: Date
-        let text: String = date.dateToString(formatedBy: "yyyy.MM.dd")
-    }
-}
-
 /// Этот протокол позволяет задать пользователю ограничения на содержимое строки, а также через метод calculateTextReplacing получить строку содержимое которой не будет удаляться из текстфилда при форматировании
 public protocol StringInputTypeProtocol {
     var formatLanguage: FormatWithLanguage? { get set }
