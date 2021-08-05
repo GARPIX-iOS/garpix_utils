@@ -19,6 +19,15 @@ public protocol StringInputTypeProtocol {
 extension StringInputTypeProtocol {
     
     /// Данная функция возвращает строку передав которую в replacingOccurrences в методах formatText и formatTextAndNumbers можно отформатировать текст
+    /// ```
+    /// let inputType = StringInputType(
+    ///     containsText: false,
+    ///     containsNumbers: true,
+    ///     containsSpecialSymbols: false
+    /// )
+    ///
+    /// let textReplacing: String = inputType?.calculateTextReplacing() ?? "" // output -> "[^0-9]"
+    /// ```
     /// - Returns: Строку необходимую для замены текст неподходящего под форматирование на ""
     func calculateTextReplacing() -> String {
         var text = ""

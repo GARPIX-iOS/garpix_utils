@@ -10,6 +10,9 @@ import Foundation
 // MARK: - Date extension with Helper Functions
 public extension Date {
     /// Эта функция преобразует Date в String
+    /// ```
+    /// let text: String = date.dateToString(dateFormat: .dayMonthDigitsYear)
+    /// ```
     /// - Parameter dateFormat: выбрать case из предоставленных значений перечислением
     /// - Returns: возвращает String из Date
     func dateToString(dateFormat: DateFormats) -> String {
@@ -19,6 +22,9 @@ public extension Date {
     }
     
     /// Эта функция преобразует Date в String но безопаснее использовать dateToString(dateFormat: DateFormats) -> String
+    /// ```
+    /// let text: String = date.dateToString(formatedBy: "yyyy.MM.dd")
+    /// ```
     /// - Parameter formatedBy: добавьте строку формата, но если что-то пойдет не так, это будет ваша вина)
     /// - Returns: возвращает String из Date
     func dateToString(formatedBy: String) -> String {
