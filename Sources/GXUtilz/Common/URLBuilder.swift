@@ -10,6 +10,9 @@ import Foundation
 /// Структура для постройки URL
 public struct URLBuilder {
     /// Функция, которая добавляет query параметры к строке
+    /// ```
+    /// URLBuilder.buildQuery(path: "endpoint", queryParams: ["s":"search"])
+    /// ```
     /// - Parameters:
     ///   - path: основной путь URL
     ///   - queryParams: Словарь в виде `название query параметра` :  `значение query параметра`

@@ -10,9 +10,32 @@ import Foundation
 import Network
 import Combine
 
-@available(iOS 14.0, *)
 /// Обсервер, который реактивно следит за состоянием сети на устройстве
 /// Лучше использовать со SwiftUI в виде Env. Object
+///
+/// Инициализация
+/// ```
+/// import SwiftUI
+/// import GXUtilz
+///
+/// @main
+/// struct testSPMApp: App {
+///     let networkChecker = NetworkChecker()
+///     var body: some Scene {
+///         WindowGroup {
+///             ContentView()
+///                 .environmentObject(networkChecker)
+///         }
+///     }
+/// }
+/// ```
+/// Вставляем в нужную View
+/// ```
+/// @EnvironmentObject var networkChecker: NetworkChecker
+/// ```
+/// Дальше можно обращаться к networkChecker и получать реактивно все данные о сети
+///
+@available(iOS 14.0, *)
 public class NetworkChecker: ObservableObject {
     @Published public var status: NWPath.Status = .satisfied
     

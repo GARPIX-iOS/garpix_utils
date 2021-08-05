@@ -22,6 +22,10 @@ struct RoundedCorner: Shape {
 
 public extension View {
     /// Функция для задания cornerRadius различным углам
+    /// ```
+    /// import SwiftUI
+    /// VStack { ... }.cornerRadius(12, corners: [.topLeft, .bottomRight])
+    /// ```
     /// - Parameters:
     ///   - radius: Радиус скругления
     ///   - corners: Массив углов (например, [.topLeft, .bottomLeft])

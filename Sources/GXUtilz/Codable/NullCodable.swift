@@ -8,6 +8,14 @@
 import Foundation
 
 /// Заставляет Encodable and Decodable свойства превращаться в `null` вместо того, чтобы убирать значения из объекта при сериализации.
+/// ```
+/// struct User: Codable {
+///     var name: String = ""
+///     @NullCodable var favMusicAlbum: String?
+/// }
+/// // Output json:
+/// // { "name": "",  favMusicAlbum: null }
+/// ```
 @propertyWrapper
 public struct NullCodable<T> {
     public var wrappedValue: T?

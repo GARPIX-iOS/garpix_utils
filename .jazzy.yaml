@@ -1,5 +1,6 @@
 author: GARPIX
 output: docs
+theme: jony
 swift_build_tool: xcodebuild
 build_tool_arguments:
   - -scheme

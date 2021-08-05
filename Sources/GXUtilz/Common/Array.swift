@@ -9,6 +9,10 @@ import Foundation
 
 public extension Array {
     /// Разбивает массив на 2 части
+    /// ```
+    /// let array = [1,2,3,4,5,6]
+    /// array.split() // output -> ([1,2,3], [4,5,6])
+    /// ```
     /// - Returns: left: - левые элементы, собранные в массив, right: - правые элементы, собранные в массив
     func split() -> (left: [Element], right: [Element]) {
         let ct = count

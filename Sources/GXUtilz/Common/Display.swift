@@ -10,6 +10,9 @@ import UIKit
 
 
 /// Структура - обертка для получения высоты и ширины телефона
+/// ```
+/// Text("Hello").frame(width: Display.width, height: Display.height * 0.9)
+/// ```
 public struct Display {
     /// Ширина телефона
     public static var width = UIScreen.main.bounds.width
