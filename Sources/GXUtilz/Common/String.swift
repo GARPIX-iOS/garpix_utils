@@ -28,7 +28,7 @@ public extension String {
         let specialSymbols = " !\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~].{8,}$"
         let text = formatLanguage?.textReplacing ?? "[^A-Za-zА-яа-я]"
         let textReplacing = addSpecialSymbols ? text + specialSymbols : text
-
+        
         for ch in mask where index < value.endIndex {
             if ch == letterSymbol {
                 result.append(String(value[index]).replacingOccurrences(of: textReplacing, with: "", options: .regularExpression))
@@ -42,7 +42,7 @@ public extension String {
         }
         return result
     }
-        
+    
     /// Функция для преобразования номера телефона в выбранный формат строки
     /// - Parameter mask: выбранный формат строки, по-умолчанию: "+Y (XXX) XXX-XX-XX"
     /// - Returns: номер телефона в нужном формате
@@ -88,36 +88,31 @@ public extension String {
         let specialSymbols = " !\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~].{8,}$"
         let text = formatLanguage?.textReplacing ?? "[^A-Za-zА-яа-я0-9]"
         let textReplacing = addSpecialSymbols ? text + specialSymbols : text
-
+        
         // value iterator
         var index = value.startIndex
-
+        
         if onlyNumbers {
             value = replacingOccurrences(of: numbersReplacing, with: "", options: .regularExpression)
         } else {
             value = replacingOccurrences(of: textReplacing, with: "", options: .regularExpression)
         }
-
+        
         // iterate over the mask characters until the iterator of values ends
         for ch in mask where index < value.endIndex {
             if ch == symbol {
                 // mask requires a value in this place, so take the next one
                 result.append(value[index])
-
+                
                 // move values iterator to the next index
                 index = value.index(after: index)
-
+                
             } else {
                 result.append(ch) // just append a mask character
             }
         }
         return result
-}
-
-
-// MARK: - StringToDate extensions
-
-public extension String {
+    }
     /// Эта функция преобразует String в Date
     /// - Parameter dateFormat: выбрать case из предоставленных значений перечислением
     /// - Returns: возвращает Date из String
