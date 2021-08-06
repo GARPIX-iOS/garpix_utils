@@ -9,23 +9,35 @@ import UIKit
 
 public extension Bundle {
     /// Получаем файл с устройства
+    /// ```
+    /// struct Example: Codable {
+    ///     var name = "Pall"
+    /// }
+    ///
+    /// func getFileWith(name: String) {
+    /// let example = Bundle.main.decode(Example.self, from: name)
+    /// // do something
+    /// }
+    /// ```
     /// - Parameters:
     ///   - : Тип, ограниченный протоколом Decodable
     ///   - file: Имя файла, из которого будем извлекать дату
     /// - Returns: Тип, ограниченный протоколом Decodable
     func decode<T: Decodable>(_: T.Type, from file: String) -> T {
+        /// Получаем путь к файлу
         guard let url = self.url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in bundle")
         }
-
+        /// Пробуем получить данные по указанному пути
         guard let data = try? Data(contentsOf: url) else {
             fatalError("Failed to load \(file) from bundle")
         }
-
+        
         let decoder = JSONDecoder()
-
         do {
+            /// Пробуем декодировать данные в заданную модель с помощью  decoder
             return try decoder.decode(T.self, from: data)
+            /// Далее обрабатываем ошибки, которые могут возникнуть в процессе декодирования
         } catch let DecodingError.dataCorrupted(context) {
             fatalError("\(context)")
         } catch let DecodingError.keyNotFound(key, context) {

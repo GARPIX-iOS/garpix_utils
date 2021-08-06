@@ -7,9 +7,14 @@
 
 import Foundation
 
+/// Структура с функциями-помощниками
 public struct FuncHelper {
     /// Функция для получения существительного в нужном склонении при использовании с числительными
-    /// например: 1 стул, 2 стула, 5 стульев
+    /// например: 1 яблоко, 3 яблока, 5 яблок
+    /// ```
+    /// let apple = FuncHelper.getWordFrom(declensions: ["яблоко", "яблока", "яблок"], int: 3)
+    /// // output -> "яблока"
+    /// ```
     /// - Parameters:
     ///   - declensions: здесь нужно указать слово в 3 склонениях (например: ["стул", "стула", "стульев"])
     ///   - int: числительное, вместе с которым будет склоняться существительное
@@ -27,26 +32,6 @@ public struct FuncHelper {
             return declensions[1]
         default:
             return declensions[2]
-        }
-    }
-    
-    /// Функция возвращает период времени между двумя датами (количество дней, месяце или лет)
-    /// - Parameters:
-    ///   - startDate: Дата начала периода, считается от начала дня в текущей локации
-    ///   - endDate: Дата окончания периода, считается от начала дня в текущей локации
-    ///   - components: Компонент даты: день, месяц, год
-    ///   - dateFormat: Стринговый формат даты, например "yyyy.MM.dd"
-    /// - Returns: Количество дней/месяцев/лет
-    public static func period(from startDate: String, to endDate: String, components: Set<Calendar.Component> = [.day], dateFormat: String) -> Int {
-        let formatter = DateFormatter()
-        formatter.locale = .current
-        formatter.dateFormat = dateFormat
-        guard let startDate = formatter.date(from: startDate),
-              let endDate = formatter.date(from: endDate) else { return 0 }
-        if let period = Calendar.current.periodBetweenDays(startDate, endDate, with: components) {
-            return period
-        } else {
-            return 0
         }
     }
 }

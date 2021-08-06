@@ -9,6 +9,12 @@ import Foundation
 
 public extension Calendar {
     /// Функция возвращает количество дней, месяцев или лет между двумя датами
+    /// ```
+    ///   let startDate = Date()
+    ///   let endDate = Date()
+    ///   days = Calendar.current.periodBetweenDays(startDate, endDate, with: [.day])
+    ///   // output -> количество дней (0)
+    /// ```
     /// - Parameters:
     ///   - startDate: Дата начала периода
     ///   - endDate: Дата окончания периода
