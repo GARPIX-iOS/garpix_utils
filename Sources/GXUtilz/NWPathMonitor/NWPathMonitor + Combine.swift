@@ -44,7 +44,8 @@ public extension NWPathMonitor {
             }
             monitor.start(queue: queue)
         }
-
+        
+        /// Функция останавливает отслеживание состояние интернет соединения
         public func cancel() {
             monitor.cancel()
         }
@@ -59,7 +60,11 @@ public extension NWPathMonitor {
 
         private let monitor: NWPathMonitor
         private let queue: DispatchQueue
-
+        
+        /// Init
+        /// - Parameters:
+        ///   - monitor: Монитор, отслеживающий интернет соединение
+        ///   - queue: Глобальная очередь
         init(monitor: NWPathMonitor, queue: DispatchQueue) {
             self.monitor = monitor
             self.queue = queue
