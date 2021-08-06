@@ -9,6 +9,16 @@ import UIKit
 
 public extension Bundle {
     /// Получаем файл с устройства
+    /// ```
+    /// struct Example: Codable {
+    ///     var name = "Pall"
+    /// }
+    ///
+    /// func getFileWith(name: String) {
+    /// let example = Bundle.main.decode(Example.self, from: name)
+    /// // do something
+    /// }
+    /// ```
     /// - Parameters:
     ///   - : Тип, ограниченный протоколом Decodable
     ///   - file: Имя файла, из которого будем извлекать дату

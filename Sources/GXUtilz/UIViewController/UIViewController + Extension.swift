@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 
 public extension UIViewController {
-    /// Фуекция добавляет  `View` из SwiftUI в качестве дочерней для `UIView`.
+    /// Функция добавляет  `View` из SwiftUI в качестве дочерней для `UIView`.
     /// ```
     /// struct ExampleView: View {
     ///    var body: some View {
