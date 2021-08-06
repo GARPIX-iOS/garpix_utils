@@ -36,48 +36,57 @@ public extension Date {
 
 // MARK: - DateFormatter extension with variables from DateFormats
 public extension DateFormatter {
+    
+    /// Дата в формате "dd MMM yyyy"
     static var dd_MMMM_yyyy: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormats.dayMonthLetterYear.rawValue
         return formatter
     }
-
+    
+    /// Дата в формате "dd.MM.yyyy"
     static var ddMMyyyy: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormats.dayMonthDigitsYear.rawValue
         return formatter
     }
     
+    /// Дата в формате "yyyy.MM.dd"
     static var yyyyMMdd: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormats.yearMonthDayWithDots.rawValue
         return formatter
     }
     
+    /// Дата в формате "yyyy-MM-dd"
     static var yyyyMMddLine: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormats.yearMonthDayWithLine.rawValue
         return formatter
     }
     
+    /// Дата в формате "yyyy-MM-dd'T'HH:mm:ss+hh:mm"
     static var serverTime: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormats.serverTime.rawValue
         return formatter
     }
     
+    /// Дата в формате "dd MMM yyyy 'в' HH:mm"
     static var dd_MMM_yyyy_In_HHmm: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormats.dayMonthLetterYearAndTime.rawValue
         return formatter
     }
     
+    /// Дата в формате "HH:mm"
     static var HHmm: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormats.timeWithDigits.rawValue
         return formatter
     }
     
+    /// Дата в формате "yyyy-MM-dd HH:mm:ss"
     static var yyyyMMddHHmmss: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormats.yearMonthDayWithLineAndTime.rawValue
