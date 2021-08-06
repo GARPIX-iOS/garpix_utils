@@ -34,28 +34,4 @@ public struct FuncHelper {
             return declensions[2]
         }
     }
-    
-    /// Функция возвращает период времени между двумя датами (количество дней, месяце или лет)
-    /// ```
-    /// let daysAmount = FuncHelper.period(from: "21.07.2021", to: "28.07.2021", components: [.day], dateFormat: "dd.MM.yyyy")
-    /// // output -> 7
-    /// ```
-    /// - Parameters:
-    ///   - startDate: Дата начала периода, считается от начала дня в текущей локации
-    ///   - endDate: Дата окончания периода, считается от начала дня в текущей локации
-    ///   - components: Компонент даты: день, месяц, год
-    ///   - dateFormat: Стринговый формат даты, например "yyyy.MM.dd"
-    /// - Returns: Количество дней/месяцев/лет
-    public static func period(from startDate: String, to endDate: String, components: Set<Calendar.Component> = [.day], dateFormat: String) -> Int {
-        let formatter = DateFormatter()
-        formatter.locale = .current
-        formatter.dateFormat = dateFormat
-        guard let startDate = formatter.date(from: startDate),
-              let endDate = formatter.date(from: endDate) else { return 0 }
-        if let period = Calendar.current.periodBetweenDays(startDate, endDate, with: components) {
-            return period
-        } else {
-            return 0
-        }
-    }
 }
