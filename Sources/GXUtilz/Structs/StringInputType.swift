@@ -9,9 +9,13 @@ import Foundation
 
 /// Этот протокол позволяет задать пользователю ограничения на содержимое строки, а также через метод calculateTextReplacing получить строку содержимое которой не будет удаляться из текстфилда при форматировании
 public protocol StringInputTypeProtocol {
+    /// Необходима для выбора языка текста который будет использован для  ограничения ввода пользователем
     var formatLanguage: FormatWithLanguage? { get set }
+    /// Установите true если хотите позволить пользователю вводить текст
     var containsText: Bool { get set }
+    /// Установите true если хотите позволить пользователю вводить числа
     var containsNumbers: Bool { get set }
+    /// Установите true если хотите позволить пользователю вводить специальные символы
     var containsSpecialSymbols: Bool { get set }
 }
 
@@ -53,9 +57,13 @@ extension StringInputTypeProtocol {
 
 /// Структура подписанная под протокол StringInputTypeProtocol упрощающая взаимодействие клиента с функциями форматирования текста
 public struct StringInputType: StringInputTypeProtocol {
+    /// Необходима для выбора языка текста который будет использован для  ограничения ввода пользователем
     public var formatLanguage: FormatWithLanguage?
+    /// Установите true если хотите позволить пользователю вводить текст
     public var containsText: Bool
+    /// Установите true если хотите позволить пользователю вводить числа
     public var containsNumbers: Bool
+    /// Установите true если хотите позволить пользователю вводить специальные символы
     public var containsSpecialSymbols: Bool
     
     /// Если не выбрать параметр форматирования языка то в таком случае вы получите init с английским языком
