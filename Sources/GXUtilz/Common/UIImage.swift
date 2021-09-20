@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension UIImage {
+public extension UIImage {
     
     func aspectFittedToHeight(_ newHeight: CGFloat) -> UIImage {
         let scale = newHeight / self.size.height
@@ -21,7 +21,7 @@ extension UIImage {
     }
 }
 
-extension View {
+public extension View {
     
     /**
      Сжатие изображения UIImage путем преобразования его в JPEG, уменьшая его размер и качество
