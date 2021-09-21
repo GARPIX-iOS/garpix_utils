@@ -15,7 +15,7 @@ public extension View {
     /// import SwiftUI
     /// Button(action: { hideKeyboard() } ) { Text("Hide Keyboard") }
     /// ```
-    public func hideKeyboard() {
+    func hideKeyboard() {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
     }

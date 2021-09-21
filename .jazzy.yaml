@@ -7,4 +7,4 @@ build_tool_arguments:
   - GXUtilz
   - -sdk
   - iphoneos
-  - -destination,platform=iOS Simulator,OS=latest,name=iPhone 11 Pro
+  - -destination, 'platform=iOS Simulator,OS=latest,name=iPhone 11'

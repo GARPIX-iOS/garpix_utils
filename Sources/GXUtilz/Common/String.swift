@@ -111,3 +111,57 @@ public extension String {
         return formatter.date(from: self)
     }
 }
+
+
+// MARK: - Email check
+
+public extension String {
+    /// Проверка на валидность email без использования RegExp
+    var isValidEmail: Bool {
+        guard !isEmpty else {
+            return false
+        }
+
+        let entireRange = NSRange(location: 0, length: count)
+
+        let types: NSTextCheckingResult.CheckingType = [.link]
+
+        guard let detector = try? NSDataDetector(types: types.rawValue) else {
+            return false
+        }
+
+        let matches = detector.matches(in: self, options: [], range: entireRange)
+
+        // should only have a single match
+        guard matches.count == 1 else {
+            return false
+        }
+
+        guard let result = matches.first else {
+            return false
+        }
+
+        // result should be a link
+        guard result.resultType == .link else {
+            return false
+        }
+
+        // result should be a recognized mail address
+        guard result.url?.scheme == "mailto" else {
+            return false
+        }
+
+        // match must be entire string
+        guard NSEqualRanges(result.range, entireRange) else {
+            return false
+        }
+
+        // but schould not have the mail URL scheme
+        if hasPrefix("mailto:") {
+            return false
+        }
+
+        // no complaints, string is valid email address
+        return true
+    }
+}

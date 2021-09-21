@@ -30,7 +30,7 @@ public extension View {
     ///   - radius: Радиус скругления
     ///   - corners: Массив углов (например, [.topLeft, .bottomLeft])
     /// - Returns: View со скругленными углами
-    public func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
     }
 }
