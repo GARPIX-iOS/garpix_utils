@@ -19,4 +19,23 @@ public struct Display {
     ///  Высота телефона
     public static var height = UIScreen.main.bounds.height
 }
+
+
+public extension CGFloat {
+    
+    /// Функция для взятия фрейма от ширины экрана в процентах
+    /// - Parameter percent: Процент от ширины
+    /// - Returns: Ширина фрейма
+    static func displayWidth(_ percent: Int) -> CGFloat {
+        Display.width * CGFloat(percent) / 100
+    }
+    
+    /// Функция для взятия фрейма от высоты экрана в процентах
+    /// - Parameter percent: Процент от высоты
+    /// - Returns: Высота фрейма
+    static func displayHeight(_ percent: Int) -> CGFloat {
+        Display.height * CGFloat(percent) / 100
+    }
+}
+
 #endif
