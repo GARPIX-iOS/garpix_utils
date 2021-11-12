@@ -25,7 +25,7 @@ extension View {
     ///   - condition: условие
     ///   - value: значение прозрачности
     /// - Returns: новая View
-    func opacityIf(condition: Binding<Bool>, value: : Binding<Bool>) -> some View {
+    func opacityIf(condition: Binding<Bool>, value: Binding<Double>) -> some View {
         modifier(OpacityIf(condition: condition, value: value))
     }
 }
@@ -47,7 +47,7 @@ extension View {
     ///   - condition: условие
     ///   - value: значение прозрачности
     /// - Returns: новая View
-    func opacityIfNot(condition: Binding<Bool>, value: : Binding<Bool>) -> some View {
+    func opacityIfNot(condition: Binding<Bool>, value: Binding<Double>) -> some View {
         modifier(OpacityIfNot(condition: condition, value: value))
     }
 }
