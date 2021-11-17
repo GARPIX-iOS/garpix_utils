@@ -10,7 +10,7 @@ import SwiftUI
 
 struct OpacityIf: ViewModifier {
     @Binding var condition: Bool
-    @Binding var value: Double
+    var value: Double
 
 
     func body(content: Content) -> some View {
@@ -19,20 +19,20 @@ struct OpacityIf: ViewModifier {
     }
 }
 
-extension View {
+public extension View {
     /// Если условие правдивое, то на View будет действовать opacity с определенным значением
     /// - Parameters:
     ///   - condition: условие
     ///   - value: значение прозрачности
     /// - Returns: новая View
-    func opacityIf(condition: Binding<Bool>, value: Binding<Double>) -> some View {
+    func opacityIf(condition: Binding<Bool>, value: Double) -> some View {
         modifier(OpacityIf(condition: condition, value: value))
     }
 }
 
 struct OpacityIfNot: ViewModifier {
     @Binding var condition: Bool
-    @Binding var value: Double
+    var value: Double
 
 
     func body(content: Content) -> some View {
@@ -41,13 +41,13 @@ struct OpacityIfNot: ViewModifier {
     }
 }
 
-extension View {
+public extension View {
     /// Если условие ложное, то на View будет действовать opacity с определенным значением
     /// - Parameters:
     ///   - condition: условие
     ///   - value: значение прозрачности
     /// - Returns: новая View
-    func opacityIfNot(condition: Binding<Bool>, value: Binding<Double>) -> some View {
+    func opacityIfNot(condition: Binding<Bool>, value: Double) -> some View {
         modifier(OpacityIfNot(condition: condition, value: value))
     }
 }
