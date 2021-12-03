@@ -39,7 +39,7 @@ final class PublishersTest: XCTestCase {
     
     func testIncorrectNamesPublished() {
         username = "123@"
-        lastName = "1"
+        lastName = "Ф"
         middleName = "DROP DATABASE;"
         
         debugPrint("\(#function)", username)

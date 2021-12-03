@@ -10,7 +10,7 @@ import Foundation
 public class NamesValidation: Validation {
     
     private var namesPredicate: NSPredicate {
-        buildPredicate("[А-Яа-яЁёA-Za-z\\s-]{1,255}")
+        buildPredicate("[А-Яа-яЁёA-Za-z\\s-]{2,255}")
     }
     
     func validateName(with value: String) -> Bool {
