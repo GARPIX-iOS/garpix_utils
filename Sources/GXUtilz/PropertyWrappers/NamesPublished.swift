@@ -8,10 +8,12 @@
 import Foundation
 import Combine
 
+// TODO: - documentation
 @propertyWrapper
 public class NamesPublished {
     /// Строковое значение email
     @Published var value: String
+    private var namesValidator = NamesValidation()
     
     ///  Значение, которое служит для постоянного обновления значения
     public var wrappedValue: String {
@@ -23,8 +25,9 @@ public class NamesPublished {
     public var projectedValue: AnyPublisher<Bool, Never> {
         return $value
             .removeDuplicates()
-            .map { name in
-                name.isEmpty
+            .map { [weak self] name in
+                guard let self = self else { return false }
+                return self.namesValidator.validateName(with: name)
             }
             .eraseToAnyPublisher()
     }
