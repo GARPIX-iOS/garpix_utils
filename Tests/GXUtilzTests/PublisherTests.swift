@@ -20,6 +20,11 @@ final class PublishersTest: XCTestCase {
     @NamesPublished var middleName: String = ""
     
     
+    @PasswordPublished var password: String = ""
+    
+    
+    // MARK: - email
+    
     func testIncorrectEmailPublished() {
         testEmail = "123@"
         let _ = $testEmail
@@ -36,6 +41,8 @@ final class PublishersTest: XCTestCase {
                 XCTAssert(isValid)
             }
     }
+    
+    // MARK: - names
     
     func testIncorrectNamesPublished() {
         username = "123@"
@@ -80,6 +87,33 @@ final class PublishersTest: XCTestCase {
             }
         
         let _ = $middleName
+            .sink { isValid in
+                XCTAssert(isValid)
+            }
+    }
+    
+    // MARK: pass
+    
+    func testIncorrectPasswordPublishedWithNumbers() {
+        password = "12345"
+        let _ = $password
+            .sink { isValid in
+                XCTAssertFalse(isValid)
+            }
+    }
+    
+    func testIncorrectPasswordPublishedWithLetters() {
+        password = "qwerty7"
+        let _ = $password
+            .sink { isValid in
+                XCTAssertFalse(isValid)
+            }
+    }
+    
+    
+    func testCorrectPasswordPublished() {
+        password = "Strong_Password!123"
+        let _ = $password
             .sink { isValid in
                 XCTAssert(isValid)
             }
