@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>View Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/View" class="dashAnchor"></a>
+    <a title="View Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html"> Docs</a>
+          <span class="no-mobile"> (79% documented)</span>
+        </p>
+    
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html"> Reference</a>
+            <img id="carat" src="../img/carat.png" alt=""/>
+          </span>
+          View Extension Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>View</h1>
+                <div class="declaration">
+                  <div class="language">
+                    
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">View</span></code></pre>
+
+                  </div>
+                </div>
+              
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:7SwiftUI4ViewP7GXUtilzE13compressImage5imageSo7UIImageCAH_tF"></a>
+                      <a name="//apple_ref/swift/Method/compressImage(image:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:7SwiftUI4ViewP7GXUtilzE13compressImage5imageSo7UIImageCAH_tF">compressImage(image:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Сжатие изображения UIImage путем преобразования его в JPEG, уменьшая его размер и качество</p>
+
+<p>Создать UIImage</p>
+<pre class="highlight swift"><code> <span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span>
+</code></pre>
+
+<p>Или</p>
+<pre class="highlight swift"><code> <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span>
+</code></pre>
+
+<p>Пример использование</p>
+<pre class="highlight swift"><code> <span class="o">.</span><span class="nf">onChange</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="n">image</span><span class="p">,</span> <span class="nv">perform</span><span class="p">:</span> <span class="p">{</span> <span class="n">image</span> <span class="k">in</span>
+     <span class="n">compressedImage</span> <span class="o">=</span> <span class="nf">compressImage</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="n">image</span><span class="p">)</span>
+ <span class="p">})</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">compressImage</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:7SwiftUI4ViewP7GXUtilzE9opacityIf9condition5valueQrAA7BindingVySbG_SdtF"></a>
+                      <a name="//apple_ref/swift/Method/opacityIf(condition:value:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:7SwiftUI4ViewP7GXUtilzE9opacityIf9condition5valueQrAA7BindingVySbG_SdtF">opacityIf(condition:<wbr>value:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Если условие правдивое, то на View будет действовать opacity с определенным значением</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">opacityIf</span><span class="p">(</span><span class="nv">condition</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>condition</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>условие</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>value</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>значение прозрачности</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>новая View</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:7SwiftUI4ViewP7GXUtilzE12opacityIfNot9condition5valueQrAA7BindingVySbG_SdtF"></a>
+                      <a name="//apple_ref/swift/Method/opacityIfNot(condition:value:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:7SwiftUI4ViewP7GXUtilzE12opacityIfNot9condition5valueQrAA7BindingVySbG_SdtF">opacityIfNot(condition:<wbr>value:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Если условие ложное, то на View будет действовать opacity с определенным значением</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">opacityIfNot</span><span class="p">(</span><span class="nv">condition</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>condition</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>условие</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>value</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>значение прозрачности</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>новая View</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:7SwiftUI4ViewP7GXUtilzE12hideKeyboardyyF"></a>
+                      <a name="//apple_ref/swift/Method/hideKeyboard()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:7SwiftUI4ViewP7GXUtilzE12hideKeyboardyyF">hideKeyboard()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Удобная обертка, которую можно использовать во всех SwiftUI View для скрытия клавиатуры программно</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+<span class="kt">Button</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="p">{</span> <span class="nf">hideKeyboard</span><span class="p">()</span> <span class="p">}</span> <span class="p">)</span> <span class="p">{</span> <span class="kt">Text</span><span class="p">(</span><span class="s">"Hide Keyboard"</span><span class="p">)</span> <span class="p">}</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hideKeyboard</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:7SwiftUI4ViewP7GXUtilzE12cornerRadius_7cornersQr12CoreGraphics7CGFloatV_So12UIRectCornerVtF"></a>
+                      <a name="//apple_ref/swift/Method/cornerRadius(_:corners:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:7SwiftUI4ViewP7GXUtilzE12cornerRadius_7cornersQr12CoreGraphics7CGFloatV_So12UIRectCornerVtF">cornerRadius(_:<wbr>corners:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Функция для задания cornerRadius различным углам</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+<span class="kt">VStack</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span><span class="o">.</span><span class="nf">cornerRadius</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="nv">corners</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">topLeft</span><span class="p">,</span> <span class="o">.</span><span class="n">bottomRight</span><span class="p">])</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cornerRadius</span><span class="p">(</span><span class="n">_</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">corners</span><span class="p">:</span> <span class="kt">UIRectCorner</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>radius</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Радиус скругления</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>corners</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Массив углов (например, [.topLeft, .bottomLeft])</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>View со скругленными углами</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/EmailPublished.html">EmailPublished</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NamesPublished.html">NamesPublished</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes.html#/s:7GXUtilz15NamesValidationC">NamesValidation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NetworkChecker.html">NetworkChecker</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/PasswordPublished.html">PasswordPublished</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes.html#/s:7GXUtilz18PasswordValidationC">PasswordValidation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/DateFormats.html">DateFormats</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/FormatWithLanguage.html">FormatWithLanguage</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/Array.html">Array</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/BidirectionalCollection.html">BidirectionalCollection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Bundle.html">Bundle</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CGFloat.html">CGFloat</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Calendar.html">Calendar</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Date.html">Date</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/DateFormatter.html">DateFormatter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Formatter.html">Formatter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Image.html">Image</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/NWPathMonitor.html">NWPathMonitor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/NWPathMonitor/Subscription.html">– Subscription</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/NWPathMonitor/Publisher.html">– Publisher</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Numeric.html">Numeric</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Optional.html">Optional</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/String.html">String</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIImage.html">UIImage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIViewController.html">UIViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/View.html">View</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/AnyOptional.html">AnyOptional</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/StringInputTypeProtocol.html">StringInputTypeProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/Validation.html">Validation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/Display.html">Display</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/FuncHelper.html">FuncHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/NullCodable.html">NullCodable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/StringInputType.html">StringInputType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/URLBuilder.html">URLBuilder</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external noopener">GARPIX</a>. All rights reserved. (Last updated: 2021-12-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calendar Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/Calendar" class="dashAnchor"></a>
+    <a title="Calendar Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html"> Docs</a>
+          <span class="no-mobile"> (79% documented)</span>
+        </p>
+    
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html"> Reference</a>
+            <img id="carat" src="../img/carat.png" alt=""/>
+          </span>
+          Calendar Extension Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>Calendar</h1>
+                <div class="declaration">
+                  <div class="language">
+                    
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Calendar</span></code></pre>
+
+                  </div>
+                </div>
+              
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:10Foundation8CalendarV7GXUtilzE17periodBetweenDays__4withSiSgAA4DateV_AIShyAC9ComponentOGtF"></a>
+                      <a name="//apple_ref/swift/Method/periodBetweenDays(_:_:with:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:10Foundation8CalendarV7GXUtilzE17periodBetweenDays__4withSiSgAA4DateV_AIShyAC9ComponentOGtF">periodBetweenDays(_:<wbr>_:<wbr>with:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Функция возвращает количество дней, месяцев или лет между двумя датами</p>
+<pre class="highlight swift"><code>  <span class="k">let</span> <span class="nv">startDate</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+  <span class="k">let</span> <span class="nv">endDate</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+  <span class="n">days</span> <span class="o">=</span> <span class="kt">Calendar</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="nf">periodBetweenDays</span><span class="p">(</span><span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">day</span><span class="p">])</span>
+  <span class="c1">// output -&gt; количество дней (0)</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">periodBetweenDays</span><span class="p">(</span><span class="n">_</span> <span class="nv">startDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="n">_</span> <span class="nv">endDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="n">with</span> <span class="nv">components</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">Calendar</span><span class="o">.</span><span class="kt">Component</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>startDate</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Дата начала периода</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>endDate</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Дата окончания периода</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>components</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Компонент даты: день, месяц или год</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Опциональное количество дней, месяцев или лет</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/EmailPublished.html">EmailPublished</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NamesPublished.html">NamesPublished</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes.html#/s:7GXUtilz15NamesValidationC">NamesValidation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NetworkChecker.html">NetworkChecker</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/PasswordPublished.html">PasswordPublished</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes.html#/s:7GXUtilz18PasswordValidationC">PasswordValidation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/DateFormats.html">DateFormats</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/FormatWithLanguage.html">FormatWithLanguage</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/Array.html">Array</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/BidirectionalCollection.html">BidirectionalCollection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Bundle.html">Bundle</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CGFloat.html">CGFloat</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Calendar.html">Calendar</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Date.html">Date</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/DateFormatter.html">DateFormatter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Formatter.html">Formatter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Image.html">Image</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/NWPathMonitor.html">NWPathMonitor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/NWPathMonitor/Subscription.html">– Subscription</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/NWPathMonitor/Publisher.html">– Publisher</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Numeric.html">Numeric</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Optional.html">Optional</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/String.html">String</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIImage.html">UIImage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIViewController.html">UIViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/View.html">View</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/AnyOptional.html">AnyOptional</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/StringInputTypeProtocol.html">StringInputTypeProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/Validation.html">Validation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/Display.html">Display</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/FuncHelper.html">FuncHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/NullCodable.html">NullCodable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/StringInputType.html">StringInputType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/URLBuilder.html">URLBuilder</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external noopener">GARPIX</a>. All rights reserved. (Last updated: 2021-12-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

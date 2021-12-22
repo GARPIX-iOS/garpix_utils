@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>String Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/String" class="dashAnchor"></a>
+    <a title="String Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html"> Docs</a>
+          <span class="no-mobile"> (79% documented)</span>
+        </p>
+    
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html"> Reference</a>
+            <img id="carat" src="../img/carat.png" alt=""/>
+          </span>
+          String Extension Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>String</h1>
+                <div class="declaration">
+                  <div class="language">
+                    
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">String</span></code></pre>
+
+                  </div>
+                </div>
+              
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:SS7GXUtilzE6doubleSdSgvp"></a>
+                      <a name="//apple_ref/swift/Property/double" class="dashAnchor"></a>
+                      <a class="token" href="#/s:SS7GXUtilzE6doubleSdSgvp">double</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">double</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:SS7GXUtilzE19ruCurrencyFormattedSSvp"></a>
+                      <a name="//apple_ref/swift/Property/ruCurrencyFormatted" class="dashAnchor"></a>
+                      <a class="token" href="#/s:SS7GXUtilzE19ruCurrencyFormattedSSvp">ruCurrencyFormatted</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Преобразует <code>String</code> в ₽</p>
+
+<p>Например:</p>
+
+<ul>
+<li>Входные данные
+<code>
+var price: String = &quot;3434.00&quot;
+</code>
+Использование:
+<code>
+Text(price.ruCurrencyFormatted)
+</code></li>
+</ul>
+
+<p>В результате получаем:</p>
+<pre class="highlight swift"><code><span class="mi">3</span> <span class="mi">434</span> <span class="err">₽</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ruCurrencyFormatted</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:SS7GXUtilzE10formatText4mask6symbol9inputTypeS2S_SJAA011StringInputG0VSgtF"></a>
+                      <a name="//apple_ref/swift/Method/formatText(mask:symbol:inputType:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:SS7GXUtilzE10formatText4mask6symbol9inputTypeS2S_SJAA011StringInputG0VSgtF">formatText(mask:<wbr>symbol:<wbr>inputType:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Этот метод поможет вам форматировать строку с различными содержимым при помощи маски</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">text</span> <span class="o">=</span> <span class="s">"123FШ^"</span>
+
+<span class="k">let</span> <span class="nv">formattedText</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="nf">formatText</span><span class="p">(</span>
+    <span class="nv">mask</span><span class="p">:</span> <span class="s">"(X-X-X) : X"</span><span class="p">,</span>
+    <span class="nv">symbol</span><span class="p">:</span> <span class="s">"X"</span>
+<span class="p">)</span> <span class="c1">// output "(1-2-3) : F"</span>
+</code></pre>
+
+<p>Также вы можете передать в метод inputType что позволит вам ограничить ввод пользователя только одним языком, только числами или спецсимволами (но тут нужно быть внимательнее потому что если вы указываете в маске спецсимволы и разрешаете их ввод через inputType то это может привести к некорректному поведению в функции</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">text</span> <span class="o">=</span> <span class="s">"123FШ^"</span>
+
+<span class="k">let</span> <span class="nv">formattedText</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="nf">formatText</span><span class="p">(</span>
+    <span class="nv">mask</span><span class="p">:</span> <span class="s">"(X-X-X) : X"</span><span class="p">,</span>
+    <span class="nv">symbol</span><span class="p">:</span> <span class="s">"X"</span><span class="p">,</span>
+    <span class="nv">inputType</span><span class="p">:</span> <span class="kt">StringInputType</span><span class="p">(</span>
+        <span class="nv">formatLanguage</span><span class="p">:</span> <span class="o">.</span><span class="n">rus</span><span class="p">,</span>
+        <span class="nv">containsText</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nv">containsNumbers</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nv">containsSpecialSymbols</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">)</span>
+<span class="p">)</span> <span class="c1">// output "(1-2-3) : Ш"</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">formatText</span><span class="p">(</span><span class="nv">mask</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                <span class="nv">symbol</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="kt">Element</span><span class="p">,</span>
+                <span class="nv">inputType</span><span class="p">:</span> <span class="kt"><a href="../Structs/StringInputType.html">StringInputType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>mask</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>пожалуйста, внимательно заполните маску и символы иначе функция может работать некорректно</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>symbol</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>буквенный либо числовой символ</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>inputType</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>структура в которой пользователь задает ограничения для текста а также его язык если вы не передадите ее в функцию то текст заменяться не будет, а только форматироваться при помощи маски.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>форматированную строку</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:SS7GXUtilzE11formatPhone4withS2S_tF"></a>
+                      <a name="//apple_ref/swift/Method/formatPhone(with:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:SS7GXUtilzE11formatPhone4withS2S_tF">formatPhone(with:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Функция для преобразования номера телефона в выбранный формат строки</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">formattedText</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="nf">formatPhone</span><span class="p">()</span> <span class="c1">// output -&gt; "+7 (999) 999-99-99"</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">formatPhone</span><span class="p">(</span><span class="n">with</span> <span class="nv">mask</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"+Y (XXX) XXX-XX-XX"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>mask</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>выбранный формат строки, по-умолчанию: &ldquo;+Y (XXX) XXX-XX-XX&rdquo;</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>номер телефона в нужном формате</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/StringToDate%20extensions"></a>
+                  <a name="//apple_ref/swift/Section/StringToDate extensions" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/StringToDate%20extensions"></a>
+                    <h3 class="section-name"><span>StringToDate extensions</span>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:SS7GXUtilzE12stringToDate10dateFormat10Foundation0D0VSgAA0D7FormatsO_tF"></a>
+                      <a name="//apple_ref/swift/Method/stringToDate(dateFormat:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:SS7GXUtilzE12stringToDate10dateFormat10Foundation0D0VSgAA0D7FormatsO_tF">stringToDate(dateFormat:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Эта функция преобразует String в Date</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">date</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="nf">stringToDate</span><span class="p">(</span><span class="nv">dateFormat</span><span class="p">:</span> <span class="o">.</span><span class="n">dayMonthDigitsYear</span><span class="p">)</span> <span class="c1">// output -&gt; Date?</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stringToDate</span><span class="p">(</span><span class="nv">dateFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/DateFormats.html">DateFormats</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">yearMonthDayWithDots</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>dateFormat</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>выбрать case из предоставленных значений перечислением</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>возвращает Date из String</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Email%20check"></a>
+                  <a name="//apple_ref/swift/Section/Email check" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Email%20check"></a>
+                    <h3 class="section-name"><span>Email check</span>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:SS7GXUtilzE12isValidEmailSbvp"></a>
+                      <a name="//apple_ref/swift/Property/isValidEmail" class="dashAnchor"></a>
+                      <a class="token" href="#/s:SS7GXUtilzE12isValidEmailSbvp">isValidEmail</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Проверка на валидность email без использования RegExp</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isValidEmail</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Check%20URL%20valid"></a>
+                  <a name="//apple_ref/swift/Section/Check URL valid" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Check%20URL%20valid"></a>
+                    <h3 class="section-name"><span>Check URL valid</span>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:SS7GXUtilzE10isValidURLSbyF"></a>
+                      <a name="//apple_ref/swift/Method/isValidURL()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:SS7GXUtilzE10isValidURLSbyF">isValidURL()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Функция для проверки валидности URL-адреса</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isValidURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/EmailPublished.html">EmailPublished</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NamesPublished.html">NamesPublished</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes.html#/s:7GXUtilz15NamesValidationC">NamesValidation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NetworkChecker.html">NetworkChecker</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/PasswordPublished.html">PasswordPublished</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes.html#/s:7GXUtilz18PasswordValidationC">PasswordValidation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/DateFormats.html">DateFormats</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/FormatWithLanguage.html">FormatWithLanguage</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/Array.html">Array</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/BidirectionalCollection.html">BidirectionalCollection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Bundle.html">Bundle</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CGFloat.html">CGFloat</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Calendar.html">Calendar</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Date.html">Date</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/DateFormatter.html">DateFormatter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Formatter.html">Formatter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Image.html">Image</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/NWPathMonitor.html">NWPathMonitor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/NWPathMonitor/Subscription.html">– Subscription</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/NWPathMonitor/Publisher.html">– Publisher</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Numeric.html">Numeric</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Optional.html">Optional</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/String.html">String</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIImage.html">UIImage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIViewController.html">UIViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/View.html">View</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/AnyOptional.html">AnyOptional</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/StringInputTypeProtocol.html">StringInputTypeProtocol</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/Validation.html">Validation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/Display.html">Display</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/FuncHelper.html">FuncHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/NullCodable.html">NullCodable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/StringInputType.html">StringInputType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/URLBuilder.html">URLBuilder</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external noopener">GARPIX</a>. All rights reserved. (Last updated: 2021-12-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
